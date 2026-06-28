@@ -1,5 +1,6 @@
 # obsidian-relation-weaver
 一个 Obsidian 插件，用于管理小说/世界构建中的人物关系。
+[![GitHub release](https://img.shields.io/github/v/release/guilier/obsidian-relation-weaver)](https://github.com/guilier/obsidian-relation-weaver/releases)
 
 ## 📖 目录
 
