@@ -1,9 +1,9 @@
 {
-  "id": "my-char-view",
+  "id": "obsidian-relation-weaver",
   "name": "人物关系谱系",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "minAppVersion": "0.15.0",
-  "description": "管理人物关系、阵营、时间线，支持统计图表、生命周期可视化、数据导入导出",
+  "description": "管理人物关系、阵营、时间线，支持仪表盘、状态筛选、生命周期可视化",
   "author": "guilier",
   "isDesktopOnly": false
 }
