@@ -1,10 +1,17 @@
-# 📚 人物关系谱系 (relation-Weaver)
+# 📚 人物关系谱系 (Relation Weaver)
+
+> An Obsidian plugin for managing characters, factions, relationships, and timelines in novels, TTRPG campaigns, and worldbuilding projects.
+
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/guilier/relation-weaver)](https://github.com/guilier/relation-weaver/releases)
+[![Obsidian Community](https://img.shields.io/badge/Obsidian-Community%20Plugin-7c3aed)](https://obsidian.md)
+
+---
+
+**Relation Weaver** helps you track character connections, analyze appearance frequency, visualize intimacy changes over time, and maintain a consistent narrative timeline — all within your Obsidian vault.
 
 > 一个 Obsidian 插件，用于管理小说/世界构建中的人物、阵营、关系和时间线。
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/guilier/obsidian-relation-weaver)](https://github.com/guilier/obsidian-relation-weaver/releases)
-[![Obsidian Community](https://img.shields.io/badge/Obsidian-Community%20Plugin-7c3aed)](https://obsidian.md)
-
+---
 
 ## 📖 目录
 
@@ -104,70 +111,56 @@
 **方式一：通过 Obsidian 社区插件（推荐）**
 
 1. 打开 Obsidian
-2. 设置 → 社区插件 → 浏览
-3. 搜索「人物关系谱系」
-4. 点击安装并启用
+2. 进入 **设置** → **社区插件** → **浏览**
+3. 在搜索框输入 `Relation Weaver` 或 `人物关系谱系`
+4. 点击 **安装** 并 **启用**
 
 **方式二：手动安装**
 
-1. 从 [Releases](https://github.com/guilier/obsidian-relation-weaver/releases) 下载最新版本
-2. 解压到 `.obsidian/plugins/obsidian-relation-weaver/`
-3. 在 Obsidian 设置中启用插件
+1. 从 [Releases](https://github.com/guilier/relation-weaver/releases) 下载最新版本的 `main.js`、`manifest.json` 和 `styles.css`
+2. 进入你的 Obsidian 仓库文件夹，找到 `.obsidian/plugins/` 目录（如果没有则手动创建）
+3. 在该目录下创建一个名为 `relation-weaver` 的新文件夹
+4. 将下载的三个文件放入该文件夹
+5. 在 Obsidian 设置中启用该插件
 
-### 2️⃣ 创建数据文件
+### 2️⃣ 基本用法
 
-在仓库根目录创建两个文件：
+**第一步：创建人物文件**
 
-**📄 人物索引.md**
+在仓库根目录创建 `人物索引.md`，格式如下：
 
 ```markdown
 ## 秦玄
 - 身份：北境皇帝
 - 阵营：北境王国
-- 类型：⭐ 主角
+- 类型：主角
 - 出生：公元前280年
 - 首次出场：公元前300年
 - 死亡：前200年
 - 亲密人物：苏雨棠
-
-## 苏雨棠
-- 身份：北境皇后
-- 阵营：北境王国
-- 类型：主角
-- 出生：公元前285年
-- 首次出场：公元前295年
-- 死亡：前205年
-- 亲密人物：秦玄
 ```
 
-> 💡 **提示**：「类型」字段用于筛选主角/配角/龙套，如果不使用可以省略。
+> 💡 「类型」字段用于主角/配角/龙套筛选，可省略。
 
-**📄 时间线.md**
+**第二步：创建时间线文件**
+
+在仓库根目录创建 `时间线.md`，格式如下：
 
 ```markdown
 ## 公元前300年
 ### 春季：
 - [战争] 秦玄率军出征
-- [出场] 秦玄在军中初露锋芒
-
-### 秋季：
-- [朝堂] 秦玄被急召回京
-
-## 公元前295年
-### 春季：
-- [感情] 秦玄与苏雨棠相识
-- [出场] 苏雨棠初入京城
 ```
 
-> 💡 **提示**：`[标签]` 格式用于事件分类，可在「标签管理」中自定义。
+> 💡 `[标签]` 用于事件分类，可在设置中自定义。
 
-### 3️⃣ 打开视图
+**第三步：打开插件**
 
 点击左侧边栏的 👥 图标，或通过命令面板执行「打开人物关系视图」
 
-### 4️⃣ 开始使用
+**第四步：加载数据**
 
-点击「🔄 刷新数据」加载你的文件，然后就可以浏览和管理人物关系了！
+点击「🔄 刷新数据」，插件会自动解析你的人物和时间线文件。
 
 
 ## 数据文件格式
@@ -471,12 +464,12 @@
 
 阵营和关系数据保存在：
 ```
-.obsidian/plugins/obsidian-relation-weaver/data.json
+.obsidian/plugins/relation-weaver/data.json
 ```
 
 亲密度变化历史保存在：
 ```
-.obsidian/plugins/obsidian-relation-weaver/intimacy_history.json
+.obsidian/plugins/relation-weaver/intimacy_history.json
 ```
 
 
@@ -514,4 +507,4 @@
 
 感谢所有使用和反馈的朋友们！你的使用和反馈是推动这个插件不断进步的最大动力。如果你喜欢这个插件，欢迎在 GitHub 上给它一个 ⭐ Star！
 
-如有问题或建议，欢迎在 [Issues](https://github.com/guilier/obsidian-relation-weaver/issues) 中提出。
+如有问题或建议，欢迎在 [Issues](https://github.com/guilier/relation-weaver/issues) 中提出。
